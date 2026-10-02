@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+:root {
+    --pink: #e88b9d;
+    --dark-pink: #c95f77;
+    --light-pink: #fff1f4;
+    --cream: #fffaf8;
+    --text: #3f3034;
+    --muted: #806d72;
+    --white: #ffffff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--cream);
+}
+
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.logo span {
+    color: var(--pink);
+    margin-left: 3px;
+}
+
+
+.header-button {
+    border: none;
+    background: var(--white);
+    color: var(--dark-pink);
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+
+.header-button:hover {
+    background: var(--light-pink);
+    transform: translateY(-2px);
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 680px;
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.heart-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--light-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pink);
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+
+.small-title {
+    color: var(--dark-pink);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1.05;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+
+h1 span {
+    color: var(--pink);
+}
+
+
+.description {
+    max-width: 520px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 35px;
+}
+
+
+.main-button {
+    border: none;
+    background: var(--pink);
+    color: white;
+    padding: 17px 25px;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 12px 30px rgba(232, 139, 157, 0.25);
+}
+
+
+.main-button span {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+.main-button:hover {
+    background: var(--dark-pink);
+    transform: translateY(-3px);
+}
+
+
+/* DECORATION */
+
+.hero-decoration {
+    width: 420px;
+    height: 420px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.big-heart {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #fde0e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pink);
+    font-size: 150px;
+    box-shadow: 0 30px 80px rgba(232, 139, 157, 0.18);
+}
+
+
+.floating-heart {
+    position: absolute;
+    color: var(--pink);
+    font-size: 25px;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+.heart-one {
+    top: 30px;
+    right: 40px;
+}
+
+
+.heart-two {
+    bottom: 60px;
+    left: 20px;
+    animation-delay: 1s;
+}
+
+
+.heart-three {
+    top: 150px;
+    right: -10px;
+    animation-delay: 1.5s;
+}
+
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* FEATURES */
+
+.features {
+    padding: 100px 7%;
+    background: var(--white);
+}
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+
+.section-title p {
+    color: var(--dark-pink);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+
+.section-title h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 45px;
+    line-height: 1.15;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.card {
+    padding: 35px;
+    border-radius: 25px;
+    background: var(--cream);
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 50px rgba(60, 40, 45, 0.08);
+}
+
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+
+.card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+
+.card p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+.card button {
+    border: none;
+    background: transparent;
+    color: var(--dark-pink);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: var(--muted);
+    background: var(--cream);
+}
+
+
+/* вид с телефона */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .heart-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-decoration {
+        margin-top: 60px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .big-heart {
+        width: 220px;
+        height: 220px;
+        font-size: 110px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 45px 20px 70px;
+    }
+
+    h1 {
+        font-size: 46px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .features {
+        padding: 70px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+    }
+
+}

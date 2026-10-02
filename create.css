@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+:root {
+    --pink: #e88b9d;
+    --dark-pink: #c95f77;
+    --light-pink: #fff1f4;
+    --cream: #fffaf8;
+    --text: #3f3034;
+    --muted: #806d72;
+    --white: #ffffff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+.header {
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    text-decoration: none;
+    color: var(--text);
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.logo span {
+    color: var(--pink);
+    margin-left: 3px;
+}
+
+
+.back-button {
+    text-decoration: none;
+    color: var(--dark-pink);
+    background: var(--white);
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+    background: var(--light-pink);
+    transform: translateY(-2px);
+}
+
+
+/* PAGE */
+
+.create-page {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 25px 100px;
+}
+
+
+.create-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.small-title {
+    color: var(--dark-pink);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+.create-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(45px, 6vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+
+.create-header p:last-child {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+
+/* FORM */
+
+.invite-form {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 45px;
+    box-shadow: 0 25px 70px rgba(60, 40, 45, 0.07);
+}
+
+
+.form-section {
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #f3e5e8;
+}
+
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+
+.form-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #eadde0;
+    border-radius: 15px;
+    padding: 15px 17px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    background: #fffdfd;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 4px rgba(232, 139, 157, 0.1);
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #b6a6aa;
+}
+
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* BUTTON */
+
+.create-button {
+    width: 100%;
+    border: none;
+    background: var(--pink);
+    color: white;
+    padding: 18px 25px;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 12px 30px rgba(232, 139, 157, 0.25);
+}
+
+
+.create-button span {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+.create-button:hover {
+    background: var(--dark-pink);
+    transform: translateY(-3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 20px;
+    }
+
+
+    .back-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+
+    .create-page {
+        padding: 45px 15px 70px;
+    }
+
+
+    .invite-form {
+        padding: 25px 20px;
+        border-radius: 22px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .create-header h1 {
+        font-size: 43px;
+    }
+
+}
