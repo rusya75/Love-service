@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --pink: #e88b9d;
+    --dark-pink: #c95f77;
+    --light-pink: #fff1f4;
+    --cream: #fffaf8;
+    --text: #3f3034;
+    --muted: #806d72;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #fde5ea,
+            transparent 35%
+        ),
+        var(--cream);
+
+    min-height: 100vh;
+}
+
+.invite-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.invite-card {
+    width: 100%;
+    max-width: 650px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 35px;
+
+    padding: 55px 50px;
+
+    text-align: center;
+
+    box-shadow:
+        0 30px 80px
+        rgba(70, 40, 50, 0.10);
+
+    backdrop-filter: blur(10px);
+}
+
+.heart {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--light-pink);
+
+    color: var(--pink);
+
+    font-size: 30px;
+}
+
+.small-title {
+    color: var(--dark-pink);
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 6vw, 65px);
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+h1 span {
+    color: var(--pink);
+}
+
+.message {
+    background: var(--light-pink);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 35px;
+}
+
+.message p {
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.details {
+    display: grid;
+
+    gap: 15px;
+
+    text-align: left;
+}
+
+.detail {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    background: #fffafa;
+
+    border-radius: 16px;
+}
+
+.detail-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: var(--light-pink);
+
+    border-radius: 12px;
+
+    font-size: 21px;
+}
+
+.detail div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.detail small {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.detail strong {
+    font-size: 15px;
+}
+
+.divider {
+    height: 1px;
+
+    background: #f0dfe3;
+
+    margin: 35px 0 25px;
+}
+
+.from {
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+.from strong {
+    color: var(--dark-pink);
+}
+
+@media (max-width: 600px) {
+
+    .invite-page {
+        padding: 20px 15px;
+    }
+
+    .invite-card {
+        padding: 40px 22px;
+
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .message {
+        padding: 20px;
+    }
+}
