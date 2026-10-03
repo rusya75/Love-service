@@ -1,9 +1,20 @@
-const startButton = document.getElementById("startButton");
-const heroButton = document.getElementById("heroButton");
+"use strict";
 
-function startCreating() {
-    alert("Скоро здесь появится создание твоего первого приглашения ❤️");
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-startButton.addEventListener("click", startCreating);
-heroButton.addEventListener("click", startCreating);
+    const startButton = document.getElementById("startButton");
+    const heroButton = document.getElementById("heroButton");
+
+    function openCreatePage() {
+        window.location.href = "create.html";
+    }
+
+    if (startButton) {
+        startButton.addEventListener("click", openCreatePage);
+    }
+
+    if (heroButton) {
+        heroButton.addEventListener("click", openCreatePage);
+    }
+
+});
